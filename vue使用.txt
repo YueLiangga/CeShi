@@ -1,0 +1,36 @@
+cd..上个位置
+cd shi  查看路径位置
+//创建vue
+vue init webpack  名
+vue create  名
+//运行vue
+ npm run dev 
+npm run build //生成静态页面
+npm run serve //调试
+
+推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
+npm i element-ui -S
+  //配置axios  和ajax一样用
+你npm install axios  //指令
+import "./registerServiceWorker"
+import axios from 'axios'
+Vue.prototype.axios=axios;
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld
+    },
+
+
+  ]
+})
+
+
+饿了么网址  ElementUI 

@@ -1,0 +1,46 @@
+ npm install -g vue-cli
+
+
+//下载vue组件
+npm i -g @vue/cli-init 
+ npm install //
+npm audit fix --force
+安装
+推荐使用 npm 的方式安装，它能更好地和webpack打包工具配合使用。
+
+npm i element-react --save
+主题
+开始前, 你还需要一个主题包, 这里我们推荐使用element-theme-default.
+
+npm install element-theme-default --save
+
+命令行中输入npm install vue-router -g来安装vue-router，
+ 之后再package.json文件中可以看到vue-router的版本号
+src目录下新建三个文件，分别为page1.vue和page2.vue以及router.js：
+router.js：配置路由 模板
+//引入vue
+import Vue from 'vue';
+//引入vue-router
+import VueRouter from 'vue-router';
+//第三方库需要use一下才能用  ///重要  不引入无法运行
+Vue.use(VueRouter)
+//引用page1页面
+import page1  from './page1.vue';
+//引用page2页面
+import page2  from './page2.vue';
+
+//定义routes路由的集合，数组类型
+const routes=[
+    //单个路由均为对象类型，path代表的是路径，component代表组件
+    {path:'/page1',component:page1},
+    {path:"/page2",component:page2}
+]
+
+//实例化VueRouter并将routes添加进去
+const router=new VueRouter({
+//ES6简写，等于routes：routes
+    routes
+});
+
+//抛出这个这个实例对象方便外部读取以及访问
+export default router
